@@ -93,7 +93,7 @@ At the end the code of the map is as follows:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-[live-page]: https://ip-tracker-nhtt.vercel.app/
+[live-page]: https://ip-tracker-xcpn.vercel.app/
 
 
 # React + TypeScript + Vite
