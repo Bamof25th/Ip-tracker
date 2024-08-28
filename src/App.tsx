@@ -34,7 +34,7 @@ const App = () => {
     }
   };
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: any) {
     e.preventDefault();
     // eslint-disable-next-line prefer-const
     let ipValue = e.target.elements["ip"].value.trim();
