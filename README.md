@@ -2,7 +2,7 @@
 
 📍A website to track and obtain information based on an IP address or a domain. This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). To get the IP Address info I used the [IP Geolocation API by IPify](https://geo.ipify.org/). To generate the map I used [LeafletJS](https://leafletjs.com/).
 
-[Solution][solution-url] . [Live Page][live-page]
+ [Live Page][live-page]
 
 </div>
 
@@ -36,7 +36,6 @@ Users should be able to:
 
 ### Links
 
-- [Solution][solution-url]
 - [Live Page][live-page]
 
 ## My process
@@ -76,22 +75,15 @@ At the end the code of the map is as follows:
 </MapContainer>
 ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### Useful resources
 
 - [React Leaflet](https://react-leaflet.js.org) - Made it easy for me to use leaflet in React
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Author
 
-- Email - [cosmohydra17@gmail.com](mailto:cosmohydra17@gmail.com)
-- Instagram - [@cosmo_art0](https://www.instagram.com/cosmo_art0/)
-- Twitter - [@CosmoArt0](https://twitter.com/cosmoart0)
-- Frontend Mentor - [@CosmoArt](https://www.frontendmentor.io/profile/cosmoart)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 [live-page]: https://ip-tracker-xcpn.vercel.app/
 
