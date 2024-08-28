@@ -28,9 +28,9 @@ const App = () => {
       const res = await data.json();
       setCoords(res);
       setLoding(false);
-    } catch (err) {
+    } catch (err : any) {
       setLoding(false);
-      setError((err as Error).message);
+      setError(err.message);
     }
   };
 
