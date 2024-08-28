@@ -99,13 +99,13 @@ function DataTable({
           width="11"
           height="14"
           title="Loading..."
-          style={{ height: "2.5rem", margin: "auto" }}
+          style={{ height: "2.5rem", margin: "auto", color:"black" }}
         />
       </TableUL>
     );
 
   if (error)
-    return (
+       return (
       <TableUL>
         <ErrorMessage>
           <svg

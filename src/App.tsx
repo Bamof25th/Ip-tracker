@@ -2,6 +2,7 @@ import { useState } from "react";
 import MapComp from "./components/MapComp";
 import "./mNormalize.css";
 import DataTable from "./components/DataTable";
+import axios from "axios";
 const App = () => {
   const [coords, setCoords] = useState({
     ip: "192.212.174.101",
@@ -16,22 +17,22 @@ const App = () => {
   console.log(coords);
   const [loding, setLoding] = useState(false);
   const [error, setError] = useState("");
+  console.log(error);
 
-  const fetchLocation = async (ip: string, domain = "") => {
-    try {
-      setLoding(true);
-      const data = await fetch(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=${
-          import.meta.env.VITE_API_KEY
-        }&ipAddress=${ip}&domain=${domain}`
-      );
-      const res = await data.json();
-      setCoords(res);
-      setLoding(false);
-    } catch (err : any) {
-      setLoding(false);
-      setError(err.message);
-    }
+  const fetchLocation = (ip: string, domain = "") => {
+    setLoding(true);
+
+    axios
+      .get(
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_Apf9jnRaKJbCamxE0IapX6S1iiqot&ipAddress=${ip}&domain=${domain}`
+      )
+      .then(function (res) {
+        setCoords(res.data);
+      })
+      .catch(function (error) {
+        setError(error.message);
+      })
+      .then(() => setLoding(false));
   };
 
   function handleSubmit(e: any) {

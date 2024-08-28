@@ -1,5 +1,8 @@
 // import React from "react";
 import { useRef } from "react";
+// import LocationIcon from "../assets/icon-location.svg";
+import L from 'leaflet';
+
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -12,6 +15,7 @@ type Positons = {
 
 const MapComp = ({ positions, isp }: { positions: Positons; isp: string }) => {
   const mapRef = useRef(null);
+  const icon = L.icon({ iconUrl: "/src/assets/icon-location.svg" });
   return (
     <div className="flex  flex-col justify-center items-center w-[100vw] h-[55vh] absolute bottom-0 z-10">
       <MapContainer
@@ -27,7 +31,7 @@ const MapComp = ({ positions, isp }: { positions: Positons; isp: string }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <Marker position={[Number(positions.lat) || 0, Number(positions.lng) || 0]}>
+        <Marker position={[Number(positions.lat) || 0, Number(positions.lng) || 0]} icon={icon} >
           <Popup>{isp || "not available"}</Popup>
         </Marker>
       </MapContainer>
